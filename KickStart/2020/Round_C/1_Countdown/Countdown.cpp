@@ -11,12 +11,12 @@ int solution() {
     int expected = K;
     for (int i=0; i<N; i++) {
         cin >> curr;
-        if (curr == expected) {
-            if (expected == 1) {
+        if (curr == K || curr == expected) {
+            if (curr == 1) {
                 ans++;
                 expected = K;
             } else {
-                expected--;
+                expected = curr - 1;
             }
         } else {
             expected = K;
